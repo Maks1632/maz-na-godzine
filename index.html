@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Муж на час — Свебодзин</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8; color: #333;
+  }
+  header {
+    background: #0077ff;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    margin: 0; font-weight: 700; font-size: 1.8rem;
+  }
+  nav a {
+    color: white; text-decoration: none; margin-left: 25px;
+    font-weight: 600; transition: opacity 0.3s;
+  }
+  nav a:hover {
+    opacity: 0.8;
+  }
+  .hero {
+    background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    text-align: center;
+    padding: 0 20px;
+  }
+  .hero h2 {
+    font-size: 2.5rem; margin-bottom: 15px;
+  }
+  .hero p {
+    font-size: 1.2rem; margin-bottom: 25px;
+    max-width: 700px;
+  }
+  .btn-primary {
+    background-color: #ff6f00;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .btn-primary:hover {
+    background-color: #e65c00;
+  }
+  main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  section.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  .service-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+  }
+  .service-card img {
+    width: 80px; height: 80px; margin-bottom: 15px;
+  }
+  .service-card h3 {
+    margin: 10px 0 8px;
+    font-weight: 700;
+    color: #0077ff;
+  }
+  .service-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .service-card .price {
+    font-weight: 700;
+    color: #ff6f00;
+    font-size: 1.1rem;
+  }
+  section.contact {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0077ff;
+  }
+  section.contact p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  section.contact a {
+    color: #0077ff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  section.map iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #888;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 480px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+    nav a {
+      margin-left: 0;
+      margin-right: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Муж на час — Свебодзин</h1>
+  <nav>
+    <a href="#services">Услуги</a>
+    <a href="#contact">Контакты</a>
+    <a href="#map">Карта</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Профессиональная помощь по дому</h2>
+  <p>Ремонт, сборка мебели, сантехника и электрика — быстро и качественно в Свебодзине</p>
+  <a href="#contact" class="btn-primary">Связаться сейчас</a>
+</section>
+
+<main>
+  <section id="services" class="services">
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/100/0077ff/hammer.png" alt="Ремонт" />
+      <h3>Мелкий ремонт</h3>
+      <p>Установка полок, мелкий ремонт, регулировки и прочее по дому.</p>
+      <p class="price">от 120 zł</p>
+    </div>
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/100/0077ff/chair.png" alt="Сборка мебели" />
+      <h3>Сборка мебели</h3>
+      <p>Собираем мебель IKEA, JYSK и другие.</p>
+      <p class="price">от 160 zł</p>
+    </div>
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/100/0077ff/faucet.png" alt="Сантехника" />
+      <h3>Сантехника</h3>
+      <p>Замена труб, ремонт кранов, установка сантехники.</p>
+      <p class="price">от 200 zł</p>
+    </div>
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/100/0077ff/electrical.png" alt="Электрика" />
+      <h3>Электрика</h3>
+      <p>Установка розеток, выключателей, светильников.</p>
+      <p class="price">от 140 zł</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Контакты</h2>
+    <p>📍 Работаем только в городе <strong>Свебодзин</strong></p>
+    <p>📞 Телефон: <a href="tel:+48503475163">+48 503 475 163</a></p>
+    <p>📧 Email: <a href="mailto:sansanuch98@gmail.com">sansanuch98@gmail.com</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/48503475163" target="_blank">Написать</a></p>
+  </section>
+
+  <section id="map" class="map">
+    <h2 style="text-align:center; margin-bottom: 15px;">Мы на карте</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.631444798995!2d15.531928276395992!3d52.25145025498256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470607e8708b40d1%3A0x5f2898821e922089!2s%C5%9Awiebodzin!5e0!3m2!1spl!2spl!4v1721400000000!5m2!1spl!2spl"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </section>
+</main>
+
+<footer>
+  © 2025 Муж на час — Свебодзин
+</footer>
+
+</body>
+</html>
